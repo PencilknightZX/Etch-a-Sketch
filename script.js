@@ -68,5 +68,3 @@ gridBtn.addEventListener("click",()=>{
         displayGrid(gridNumb = userInput);
     }
 });
-
-
