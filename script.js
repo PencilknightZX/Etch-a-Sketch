@@ -13,6 +13,12 @@ function displayGrid(gridNumb){
     } 
 }
 
+function clearGrid(){
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }  
+}
+
 displayGrid(gridNumb);
 
 gridBtn.addEventListener("click",()=>{
@@ -21,7 +27,8 @@ gridBtn.addEventListener("click",()=>{
         alert("The Maximum Number of squares per side is 100, Please try again")
     }
     else{
-        gridNumb = userInput;
+        clearGrid();
+        displayGrid(gridNumb = userInput);
     }
 });
 
